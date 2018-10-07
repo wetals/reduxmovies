@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Moviedata = props => {
   return (
@@ -8,6 +9,12 @@ const Moviedata = props => {
       <div>{props.vote_average}</div>
     </div>
   );
+};
+
+Moviedata.propTypes = {
+  title: PropTypes.string,
+  overview: PropTypes.string,
+  vote_average: PropTypes.number
 };
 
 export default Moviedata;
